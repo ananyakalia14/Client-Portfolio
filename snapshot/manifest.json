@@ -1,0 +1,12 @@
+{
+  "routes": {
+    "/": "dpl_4WoHkRv1HRq56aWg8hwMwEuLnuS8",
+    "/work": "dpl_4WoHkRv1HRq56aWg8hwMwEuLnuS8",
+    "/about": "dpl_4WoHkRv1HRq56aWg8hwMwEuLnuS8",
+    "/b-roll": "dpl_4WoHkRv1HRq56aWg8hwMwEuLnuS8",
+    "/playground": "dpl_4WoHkRv1HRq56aWg8hwMwEuLnuS8",
+    "/creative-direction/product-hunt": "dpl_4WoHkRv1HRq56aWg8hwMwEuLnuS8",
+    "/creative-direction/bring-whimsy-and-visitors-to-a-very-B2B-booth": "dpl_4WoHkRv1HRq56aWg8hwMwEuLnuS8",
+    "/email-marketing/comic-strip-in-a-drip": "dpl_4WoHkRv1HRq56aWg8hwMwEuLnuS8"
+  }
+}
