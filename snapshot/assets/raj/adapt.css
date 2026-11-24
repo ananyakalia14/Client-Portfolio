@@ -241,7 +241,19 @@ footer p:has(.f2-heart),
 .raj-koi-hero :is(.hero-word--hello, .hero-word--meet) { color: #fff0dc; }
 .raj-koi-hero .hero-word--stranger { color: var(--ink); }
 .raj-koi-hero .hero-byline { text-shadow: 0 1px 5px #150e17, 0 0 10px #150e17; }
-.raj-koi-hero .hero-photo { visibility: hidden; pointer-events: none; }
+.raj-koi-hero .hero-photo,
+.hero-photo,
+.hero .hero-photo,
+img[src*="hero-1168"],
+img[src*="aperture"],
+img[src*="intro-iris"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
 
 .raj-koi-water .micro-slats { position: relative; width: 100%; height: 100%; overflow: hidden; }
 
@@ -587,7 +599,7 @@ body .raj-koi-fish * {
   box-shadow: none !important;
 }
 
-/* Explicit Inverted / Light State */
+/* Inverted / Light State on Light/Cream Backgrounds */
 #site-nav.raj-nav-light:not(.open) .raj-bar,
 #site-nav.inverted:not(.open) .raj-bar {
   background-color: #141414 !important;

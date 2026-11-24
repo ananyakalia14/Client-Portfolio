@@ -171,6 +171,9 @@ const faq = [
   [["where can i", "find your work?"], "Explore the Work and Playground pages, or follow the GitHub links for the code."],
 ];
 function home() {
+  for (const photo of all(document, ".hero-photo, img[src*='hero-1168'], img[src*='aperture'], img[src*='intro-iris']")) {
+    photo.remove();
+  }
   set(".hero-word--sruthi .hero-word__txt", "Raj Mane");
   const name = all(document, ".hero-word__txt").at(-1);
   if (normalize(name?.textContent)?.toLowerCase() === "sruthi") write(name, "Raj Mane");

@@ -105,7 +105,7 @@ export const gallery = [
   ["iste.jpeg", "ISTE TCET"],
   ["dilatio.jpeg", "Dilatio & Co."],
   ["fit.webp", "Fit In Fit Out project card"],
-  ["aperture.webp", "Computer vision aperture artwork"],
+  ["ancient.webp", "Ancient Melodies Studio"],
 ];
 
 

@@ -1,19 +1,19 @@
 export const assetMap = {
   "/sruthi-the-hero.webp": [
-    "/raj/hero-1168.webp",
-    "A computer vision aperture"
+    "/raj/transparent.webp",
+    ""
   ],
   "/sruthi-the-hero-w900.webp": [
-    "/raj/hero-900.webp",
-    "A computer vision aperture"
+    "/raj/transparent.webp",
+    ""
   ],
   "/sruthi-the-hero-w640.webp": [
-    "/raj/hero-640.webp",
-    "A computer vision aperture"
+    "/raj/transparent.webp",
+    ""
   ],
   "/nav-photo.webp": [
-    "/raj/nav-art.webp",
-    "Aperture artwork"
+    "/raj/ancient.webp",
+    "Ancient Melodies Studio"
   ],
   "/about-big-life-poster.webp": [
     "/raj/energy-architecture.jpeg",
@@ -68,8 +68,8 @@ export const assetMap = {
     ""
   ],
   "/preloader-paris.webp": [
-    "/raj/intro-iris.webp",
-    "Brushed-metal aperture blades"
+    "/raj/intro-glass.webp",
+    "Smoked glass ring"
   ],
   "/preloader-porsche.webp": [
     "/raj/intro-reflection.webp",
@@ -144,8 +144,8 @@ export const assetMap = {
     "Fit In Fit Out project card"
   ],
   "/broll/cutu.webp": [
-    "/raj/aperture.webp",
-    "Computer vision aperture artwork"
+    "/raj/ancient.webp",
+    "Ancient Melodies Studio"
   ],
   "/broll/cycling-to-nowhere.webp": [
     "/raj/interview.png",
@@ -208,8 +208,8 @@ export const assetMap = {
     "Fit In Fit Out project card"
   ],
   "/broll/i-was-inside-cloudss.webp": [
-    "/raj/aperture.webp",
-    "Computer vision aperture artwork"
+    "/raj/ancient.webp",
+    "Ancient Melodies Studio"
   ],
   "/broll/i-watch-the-sunrise-below-me.webp": [
     "/raj/interview.png",
@@ -272,8 +272,8 @@ export const assetMap = {
     "Fit In Fit Out project card"
   ],
   "/broll/munnar.webp": [
-    "/raj/aperture.webp",
-    "Computer vision aperture artwork"
+    "/raj/ancient.webp",
+    "Ancient Melodies Studio"
   ],
   "/broll/my-balcony-in-naggar.webp": [
     "/raj/interview.png",
@@ -336,8 +336,8 @@ export const assetMap = {
     "Fit In Fit Out project card"
   ],
   "/broll/pucho-na-pucho-mujhe-kya.webp": [
-    "/raj/aperture.webp",
-    "Computer vision aperture artwork"
+    "/raj/ancient.webp",
+    "Ancient Melodies Studio"
   ],
   "/broll/pushkar-beautiful-ladies.webp": [
     "/raj/interview.png",
@@ -400,8 +400,8 @@ export const assetMap = {
     "Fit In Fit Out project card"
   ],
   "/broll/so-prettyyy-in-udapir.webp": [
-    "/raj/aperture.webp",
-    "Computer vision aperture artwork"
+    "/raj/ancient.webp",
+    "Ancient Melodies Studio"
   ],
   "/broll/so-serious-lel.webp": [
     "/raj/interview.png",
@@ -464,8 +464,8 @@ export const assetMap = {
     "Fit In Fit Out project card"
   ],
   "/broll/twinning-hehe.webp": [
-    "/raj/aperture.webp",
-    "Computer vision aperture artwork"
+    "/raj/ancient.webp",
+    "Ancient Melodies Studio"
   ],
   "/broll/udaipur-day-onee.webp": [
     "/raj/interview.png",
@@ -528,8 +528,8 @@ export const assetMap = {
     "Fit In Fit Out project card"
   ],
   "/broll/wow-himachal.webp": [
-    "/raj/aperture.webp",
-    "Computer vision aperture artwork"
+    "/raj/ancient.webp",
+    "Ancient Melodies Studio"
   ],
   "/broll/yazdanii.webp": [
     "/raj/interview.png",
@@ -624,8 +624,8 @@ export const assetMap = {
     "Fit In Fit Out project card"
   ],
   "/corkboard/web/prashar-trek.webp": [
-    "/raj/aperture.webp",
-    "Computer vision aperture artwork"
+    "/raj/ancient.webp",
+    "Ancient Melodies Studio"
   ],
   "/corkboard/web/scuba-certified-patch.webp": [
     "/raj/nexus-ai.jpeg",
@@ -720,8 +720,8 @@ export const assetMap = {
     "Air Paint tracking pipeline"
   ],
   "/playground-sunflowers/480/ravi-photoshoot-into-the-sun.webp": [
-    "/raj/aperture.webp",
-    "Computer vision aperture artwork"
+    "/raj/ancient.webp",
+    "Ancient Melodies Studio"
   ],
   "/playground-sunflowers/480/ravi-photoshoot-laughing.webp": [
     "/raj/interview.png",
@@ -780,8 +780,8 @@ export const assetMap = {
     "Air Paint tracking pipeline"
   ],
   "/playground-sunflowers/ravi-photoshoot-into-the-sun.webp": [
-    "/raj/aperture.webp",
-    "Computer vision aperture artwork"
+    "/raj/ancient.webp",
+    "Ancient Melodies Studio"
   ],
   "/playground-sunflowers/ravi-photoshoot-laughing-w640.webp": [
     "/raj/interview.png",
@@ -864,8 +864,8 @@ export const assetMap = {
     "AI Model Building certificate"
   ],
   "/playground-postcards/stop-force-fitting-red.webp": [
-    "/raj/aperture.webp",
-    "Computer vision aperture artwork"
+    "/raj/ancient.webp",
+    "Ancient Melodies Studio"
   ],
   "/playground-postcards/stop-force-fitting-wordsearch.webp": [
     "/raj/air-paint-pipeline.webp",
@@ -932,8 +932,8 @@ export const assetMap = {
     "Air Paint tracking pipeline"
   ],
   "/playground-crafts/my-wall.webp": [
-    "/raj/aperture.webp",
-    "Computer vision aperture artwork"
+    "/raj/ancient.webp",
+    "Ancient Melodies Studio"
   ],
   "/playground-crafts/paint-palette.webp": [
     "/raj/interview.png",
@@ -1340,8 +1340,8 @@ export const assetMap = {
     "Axios EDIC TCET E-Cell"
   ],
   "/video-posters/3VtMVO22pgc.jpg": [
-    "/raj/aperture.webp",
-    "Computer vision aperture artwork"
+    "/raj/ancient.webp",
+    "Ancient Melodies Studio"
   ],
   "/video-posters/_NcfSOfL16I.jpg": [
     "/raj/interview.png",
