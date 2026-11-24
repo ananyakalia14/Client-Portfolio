@@ -241,119 +241,7 @@ footer p:has(.f2-heart),
 .raj-koi-hero :is(.hero-word--hello, .hero-word--meet) { color: #fff0dc; }
 .raj-koi-hero .hero-word--stranger { color: var(--ink); }
 .raj-koi-hero .hero-byline { text-shadow: 0 1px 5px #150e17, 0 0 10px #150e17; }
-.raj-koi-hero .hero-photo { visibility: visible !important; pointer-events: auto !important; }
-
-/* --- RAJ HERO MEDIA (FLOWER VIDEO & APERTURE LENS) --- */
-.hero-video-wrap {
-  position: absolute;
-  bottom: 2cqh;
-  left: 50%;
-  transform: translateX(-50%);
-  height: clamp(340px, 80cqh, 720px);
-  width: auto;
-  aspect-ratio: 400 / 622;
-  z-index: 4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: auto;
-  border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.12);
-  background: #000;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
-}
-
-.hero-video-wrap:hover {
-  transform: translateX(-50%) scale(1.015);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.22);
-}
-
-.hero-video-wrap video,
-.hero-video-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: inherit;
-}
-
-.hero-media-switch {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  z-index: 10;
-  display: flex;
-  gap: 4px;
-  background: rgba(15, 15, 18, 0.78);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 9999px;
-  padding: 3px;
-  opacity: 0.85;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.hero-video-wrap:hover .hero-media-switch,
-.hero-media-switch:focus-within {
-  opacity: 1;
-  transform: translateY(-1px);
-}
-
-.hero-media-btn {
-  background: transparent;
-  border: none;
-  color: #a1a1aa;
-  font-family: var(--font-mono, monospace);
-  font-size: 11px;
-  letter-spacing: 0.04em;
-  padding: 4px 10px;
-  border-radius: 9999px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  text-transform: uppercase;
-}
-
-.hero-media-btn:hover {
-  color: #fff;
-}
-
-.hero-media-btn.is-active {
-  background: rgba(255, 255, 255, 0.22);
-  color: #fff;
-  font-weight: 600;
-}
-
-@media (max-width: 1024px) {
-  .hero-video-wrap {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    transform: none;
-    height: clamp(260px, 48svh, 440px);
-    margin: 16px auto;
-  }
-  .hero-video-wrap:hover {
-    transform: scale(1.015);
-  }
-}
-
-@media (max-width: 640px) {
-  .hero-video-wrap {
-    height: clamp(230px, 44svh, 360px);
-    margin: 10px auto;
-  }
-  .hero-media-switch {
-    opacity: 1;
-    top: 8px;
-    right: 8px;
-  }
-  .hero-media-btn {
-    font-size: 10px;
-    padding: 3px 7px;
-  }
-}
+.raj-koi-hero .hero-photo { visibility: hidden; pointer-events: none; }
 
 .raj-koi-water .micro-slats { position: relative; width: 100%; height: 100%; overflow: hidden; }
 
@@ -639,16 +527,18 @@ body .raj-koi-fish * {
   pointer-events: none;
 }
 
+/* Default state: Black against white/light backgrounds */
 .raj-bar {
   display: block;
   height: 2px;
-  background-color: #ffffff !important;
+  background-color: #141414 !important;
   border-radius: 2px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: none !important;
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
               opacity 0.22s ease,
               width 0.22s ease,
-              background-color 0.22s ease;
+              background-color 0.22s ease,
+              box-shadow 0.22s ease;
   transform-origin: center;
 }
 
@@ -668,12 +558,19 @@ body .raj-koi-fish * {
   width: 22px;
 }
 
-/* Open State (Close 'X') */
+/* White bars on Dark backgrounds (Hero section, /playground, or raj-nav-dark) */
+#site-nav.raj-nav-dark:not(.open) .raj-bar {
+  background-color: #ffffff !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Open State (Close 'X' inside dark takeover overlay) */
 #site-nav.open .raj-bar-1,
 .nav-burger[aria-expanded="true"] .raj-bar-1 {
   transform: translateY(7px) rotate(45deg);
   width: 22px;
   background-color: #ffffff !important;
+  box-shadow: none !important;
 }
 
 #site-nav.open .raj-bar-2,
@@ -687,12 +584,14 @@ body .raj-koi-fish * {
   transform: translateY(-7px) rotate(-45deg);
   width: 22px;
   background-color: #ffffff !important;
+  box-shadow: none !important;
 }
 
-/* Inverted State on Light/Cream Backgrounds */
+/* Explicit Inverted / Light State */
+#site-nav.raj-nav-light:not(.open) .raj-bar,
 #site-nav.inverted:not(.open) .raj-bar {
-  background-color: var(--ink, #141414) !important;
-  box-shadow: none;
+  background-color: #141414 !important;
+  box-shadow: none !important;
 }
 
 /* --- RAJ TECH STACK (1:1 with reference) --- */
@@ -851,3 +750,6 @@ body .raj-koi-fish * {
     padding-bottom: 0;
   }
 }
+
+
+

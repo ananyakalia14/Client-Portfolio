@@ -415,6 +415,37 @@ function syncFooterSocial() {
   }
 }
 
+function syncNavBurgerTheme() {
+  const nav = one(document, "#site-nav");
+  if (!nav) return;
+  const path = currentRoute();
+  if (path === "/playground") {
+    nav.classList.add("raj-nav-dark");
+    nav.classList.remove("raj-nav-light");
+    return;
+  }
+  if (path !== "/") {
+    nav.classList.add("raj-nav-light");
+    nav.classList.remove("raj-nav-dark");
+    return;
+  }
+  const hero = one(document, ".hero, .raj-koi-hero, #top");
+  if (hero) {
+    const rect = hero.getBoundingClientRect();
+    if (rect.bottom > 55) {
+      nav.classList.add("raj-nav-dark");
+      nav.classList.remove("raj-nav-light");
+    } else {
+      nav.classList.add("raj-nav-light");
+      nav.classList.remove("raj-nav-dark");
+    }
+  } else {
+    const isLight = window.scrollY > 300;
+    nav.classList.toggle("raj-nav-light", isLight);
+    nav.classList.toggle("raj-nav-dark", !isLight);
+  }
+}
+
 function syncNavBurger() {
   const burger = one(document, "#nav-burger");
   if (!burger) return;
@@ -434,6 +465,12 @@ function syncNavBurger() {
       <span class="raj-bar raj-bar-3"></span>
     `;
     burger.appendChild(bars);
+  }
+  syncNavBurgerTheme();
+  if (!window._rajNavScrollBound) {
+    window._rajNavScrollBound = true;
+    window.addEventListener("scroll", syncNavBurgerTheme, { passive: true });
+    window.addEventListener("resize", syncNavBurgerTheme, { passive: true });
   }
 }
 
