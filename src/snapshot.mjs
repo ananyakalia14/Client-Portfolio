@@ -41,6 +41,8 @@ function adaptScript(pathname) {
   if (found) return found;
   let code=patchCopy(readFileSync(new URL('assets'+pathname,snapshot),'utf8'));
   if (pathname.endsWith('/3501oje9wtl4w.js')) {
+    code = code.replace('let c=["a copywriter/marketer/artist","with chutzpah."]', 'let c=["AI Data Science Engineer"," / full stack developer"]');
+    code = code.replace('children:"sruthi"', 'children:"Raj Mane"');
     code = code.replace('s="Impact"', 's="Raj Geist"').replaceAll('400 100px "${s}"', '800 100px "${s}"');
     const words = { NEED:'I', MONEY:'BUILD', FOR:'SYSTEMS', MY:'THAT', PORSCHE:'SEE' };
     code = code.replace(/"\b(NEED|MONEY|FOR|MY|PORSCHE)\b"/g, (_, word) => JSON.stringify(words[word]));
