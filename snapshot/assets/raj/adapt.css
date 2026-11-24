@@ -686,11 +686,11 @@ img.takeover-photo {
 
 .raj-tech-stack-card {
   background: #2563eb;
-  background: linear-gradient(135deg, #225ce8 0%, #1e52db 100%);
+  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
   width: 100%;
   border-radius: 14px;
   padding: 26px 32px 28px;
-  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.22), 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 16px 40px rgba(29, 78, 216, 0.25), 0 4px 12px rgba(0, 0, 0, 0.08);
   color: #ffffff;
   position: relative;
   box-sizing: border-box;
@@ -768,9 +768,9 @@ img.takeover-photo {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-right: 6px;
-  width: 16px;
-  height: 16px;
+  margin-right: 7px;
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
 }
 
