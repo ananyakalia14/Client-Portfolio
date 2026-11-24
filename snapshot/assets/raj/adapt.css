@@ -451,21 +451,8 @@ body .raj-koi-fish * {
   height: 100%;
 }
 .raj-landscape-toggle {
-  position: absolute;
-  bottom: 14px;
-  right: max(var(--page-pad-x, 5vw), 16px);
-  min-height: 44px;
-  padding: 0 14px;
-  border: 1px solid #687665;
-  border-radius: 99px;
-  background: #f7f4e9;
-  color: #213930;
-  font-size: 12px;
-  font-weight: 650;
-  cursor: pointer;
+  display: none !important;
 }
-.raj-landscape-toggle:hover { background: #e3e7d4; }
-.raj-landscape-toggle:focus-visible { outline: 2px solid #203e36; outline-offset: 3px; }
 
 /* Footer social icon row */
 .f-social, .f2-social {

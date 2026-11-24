@@ -130,10 +130,7 @@ function mountLandscape(footer) {
   if (!ctx) return () => {};
   const panel = document.createElement("div");
   panel.className = "raj-footer-landscape";
-  const button = document.createElement("button");
-  button.type = "button";
-  button.className = "raj-landscape-toggle";
-  panel.append(canvas, button);
+  panel.append(canvas);
   footer.append(panel);
 
   const preference = matchMedia("(prefers-reduced-motion: reduce)");
@@ -168,8 +165,6 @@ function mountLandscape(footer) {
   }
 
   function sync() {
-    button.textContent = paused ? "Play" : "Pause";
-    button.setAttribute("aria-label", paused ? "Play landscape animation" : "Pause landscape animation");
     if (visible && !paused && !document.hidden) {
       if (!frame) frame = requestAnimationFrame(animate);
     } else {
@@ -200,7 +195,6 @@ function mountLandscape(footer) {
     paused = preference.matches;
     sync();
   }
-  button.onclick = () => { paused = !paused; sync(); };
   preference.addEventListener("change", onPreference);
   document.addEventListener("visibilitychange", sync);
   resize.observe(panel);
