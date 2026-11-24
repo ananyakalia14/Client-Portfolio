@@ -12,8 +12,8 @@ export const assetMap = {
     ""
   ],
   "/nav-photo.webp": [
-    "/raj/ancient.webp",
-    "Ancient Melodies Studio"
+    "/raj/flower-glitch-poster.webp",
+    "Motion art"
   ],
   "/about-big-life-poster.webp": [
     "/raj/energy-architecture.jpeg",

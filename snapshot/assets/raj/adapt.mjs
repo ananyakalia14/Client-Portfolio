@@ -475,12 +475,43 @@ function syncNavBurger() {
     window.addEventListener("scroll", syncNavBurgerTheme, { passive: true });
     window.addEventListener("resize", syncNavBurgerTheme, { passive: true });
   }
+  syncTakeoverVideo();
+}
+
+function syncTakeoverVideo() {
+  const takeover = one(document, "#nav-takeover");
+  if (!takeover) return;
+  const oldImg = one(takeover, "img.takeover-photo");
+  if (oldImg && oldImg.style.display !== "none") {
+    oldImg.style.setProperty("display", "none", "important");
+  }
+  let video = one(takeover, "video.raj-takeover-video");
+  if (!video) {
+    video = document.createElement("video");
+    video.className = "raj-takeover-video";
+    video.autoplay = true;
+    video.loop = true;
+    video.muted = true;
+    video.playsInline = true;
+    video.setAttribute("playsinline", "");
+    video.setAttribute("webkit-playsinline", "");
+    video.innerHTML = `
+      <source src="/raj/flower-glitch.mp4" type="video/mp4">
+      <source src="/raj/flower-glitch.webm" type="video/webm">
+    `;
+    takeover.appendChild(video);
+  }
+  const nav = one(document, "#site-nav");
+  if (nav?.classList.contains("open")) {
+    if (video.paused) video.play().catch(() => {});
+  }
 }
 
 function apply() {
   const path = currentRoute();
   applyShared(path);
   syncNavBurger();
+  syncTakeoverVideo();
   syncFooterSocial();
   syncQuoteReveal(path);
   syncJourney(path);
